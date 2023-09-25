@@ -1,0 +1,94 @@
+ul {
+    list-style-type: none; /* Tar bort punktlistans stil */
+    margin: 0; /* Tar bort margin */
+    padding: 0; /* Tar bort padding */
+    overflow: hidden; /* Döljer överskotssinnehåll om det finns */
+    background-color: #ece7e1; /* Sätter bakgrundsfärgen */
+}
+
+li {
+    float: right; /* Placerar elementet åt höger */
+}
+
+.custom-link a {
+    font-family: Grandslang roman, sans-serif; /* Sätter teckensnittet för länkarna */
+    text-transform: uppercase; /* Konverterar texten till versaler */
+    font-weight: 500; /* Sättet fetstil */
+    display: block; /* Gör länkarna till ett blockelement (tar upp hela brädden/horisontella utrymmet inom sitt föräldraelement) */
+    color: #1a1818; /* Sätter färgen på texten */
+    text-align: center; /* Centrerar texten horisontellt */
+    position: relative; /* Aktiverar relativ positionering (element omkring kommer ej att påverkas om det ursprungliga elementet ändrar sin plats */
+    padding: 14px 10px; /* Sätter inre marginaler */
+    text-decoration: none; /* Tar bort understrykning från länkarna */
+    background-color: #ece7e1; /* Sätter bakgrundsfärgen */
+    background: linear-gradient(0deg, rgba(208, 29, 208, 0.792), rgba(208, 29, 208, 0.792)) no-repeat right bottom / 0 var(--bg-h); /* Skapar en gradient bakgrund */
+    transition: background-size 350ms; /* Skapar en smidig övergång (animering) för bakgrundens storlek */
+    --bg-h: 100%; /* Bakgrundens storlek */
+}
+
+.custom-link a::before {
+    position: absolute; /* Aktiverar absolut positionering (elementet tar inte hänsyn till sitt normala flöde i dokumentet och detta kan innebära att det överlappar andra element */
+    width: 100%; /* Bredden är 100% av förälderelementet */
+    height: 4px; /* Sätter höjden */
+    border-radius: 4px; /* Skapar rundade hörn */
+    background-color: rgba(208, 29, 208, 0.792); /* Sätter bakgrundsfärgen */
+    bottom: 0; /* Placerar elementet längst ned */
+    left: 0; /* Placerar elementet längst till vänster */
+    transform-origin: right; /* Ursprungspunkten för transformeringen/animeringan är till höger */
+    transform: scaleX(0); /* Ändrar/manipulerar visningen av ett element (scaleX(0) förvandlar emelentet platt längs x-axeln, med andra ord en linje längs med) */
+    transition: transform .3s ease-in-out; /* Skapar en smidig övergång för transformeringen */
+}
+
+.custom-link a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h); /* Sätter bakgrundens storlek när länken är hovrad eller har fokus */
+    background-position-x: left; /* Justerar bakgrundens position åt vänster */
+}
+
+.custom-link a:hover::before {
+    transform-origin: left; /* Ursprungspunkten för tranformering är till vänster */
+    /* transform: scaleX(1);  */
+}
+
+.background-color{
+    background-color: #ece7e1; /* Sätter bakgrundsfärgen på <body> */
+    margin: 0; /* Tar bort margins */
+
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #ece7e1;
+    padding: 10px;
+    height: auto;
+}
+
+footer div {
+    margin-right: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-family: Grandslang roman, sans-serif; /* Sätter teckensnittet */
+    color: #1a1818; /* Sätter färgen på texten */
+    text-transform: lowercase; /* Konverterar texten till små bokstäver */
+    padding-right: 10px /* Get elementet en right-margin på 10px */
+}
+
+footer a {
+    font-family: Grandslang roman, sans-serif; /* Sätter teckensnittet för länkarna */
+    text-transform: lowercase; /* Konverterar texten till versaler */
+    font-weight: 500; /* Sättet fetstil */
+    color: #1a1818; /* Sätter färgen på texten */
+    text-align: right; /* Centrerar texten horisontellt */
+    text-decoration: none; /* Tar bort understrykning från länkarna */
+    background-color: #ece7e1; /* Sätter bakgrundsfärgen */
+    background: linear-gradient(0deg, rgba(208, 29, 208, 0.792), rgba(208, 29, 208, 0.792)) no-repeat right bottom / 0 var(--bg-h); /* Skapar en gradient bakgrund */
+    transition: background-size 350ms; /* Skapar en smidig övergång (animering) för bakgrundens storlek */
+    --bg-h: 100%; /* Bakgrundens storlek */
+}
+
+footer a:hover {
+    filter:drop-shadow(10px 8px 8px #a8a096);
+}

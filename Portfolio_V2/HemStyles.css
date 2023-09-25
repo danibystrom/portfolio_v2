@@ -1,0 +1,92 @@
+.col-md-4 {
+    border-radius: 5px; /* Rundar kanterna på kortet */
+    overflow: hidden; /* Förhindrar att innehåll går utanför kortets kanter */
+}
+
+.col-md-4 img {
+    max-width: 100%; /* Gör att bilden inte blir större än kortets bredd */
+    display: block; /* Gör att bilden tar upp hela raden */
+    filter:drop-shadow(10px 8px 8px rgba(208, 29, 208, 0.792)); /* Skapar en färgad skugga runt bilden */
+}
+
+.col-md-4 p {
+    padding: 10px; /* Inre marginal runt texten inuti kortet */
+}
+
+.col-md-8 {
+    display: flex; /* Aktiverar flexbox-layout */
+    flex-direction: column;  /* Lägger till element i en kolumnlayout */
+    gap: 20px; /* Skapar avstånd mellan elementen i kolumn */
+    align-items: flex-end; /* Justerar elementens placering till höger i kolumnen */
+    text-align: right; /* Placerar texten till höger i elementet */
+}
+
+.col-md-8 h1 {
+    font-family: Grandslang roman, sans-serif; /* Sätter teckensnittet för rubriken */
+    color: #1a1818; /* Sätter färgen på texten */
+    text-align: right; /* Placerar texten till höger */
+    text-transform: uppercase; /* Konverterar texten till versaler */
+    font-size: 11vw; /* Sätter fontstorleken i förhållande till viewport-bredden (området där innehållet visas) */
+    font-weight: 300; /* Sätter fetstil */
+    line-height: .95em; /* Justerar radhöjden */
+    display: block; /* Gör rubriken till ett blockelement */
+    position: relative; /* Aktiverar relativ positionering (påverkar inte element runtom) */
+    margin-bottom: 0; /* Tar bort nedre marginalen */
+    padding-top: 5vw;
+    margin-right: 10px;
+}
+
+.col-md-8 h2 {
+    font-family: Grandslang roman, sans-serif; /* Sätter teckensnittet */
+    color: #1a1818; /* Sätter textfärgen */
+    text-align: right; /* Placerar texten till höger */
+    text-transform: lowercase; /* Konverterar texten till små bokstäver */
+    font-size: 5vw; /* Sätter fontstorleken i förhållande till viewport-bredden */
+    font-weight: 300; /* Sätter fetstil */
+    line-height: .95em; /* Sätter radhöjden */
+    display: block; /* Gör rubriken till ett blockelement */
+    position: relative; /* Aktiverar relativ positionern (påverkar inte element runtom) */
+    margin-top: 0; /* Tar bort nedre marginalen */
+    margin-right: 10px;
+
+}
+
+.col-md-8 a {
+    font-family: Grandslang roman, sans-serif;
+    text-transform: lowercase;
+    font-size: 3vw;
+    font-weight: 500;
+    display: block;
+    color: #1a1818;
+    text-align: right;
+    margin-right: 10px;
+    position: relative;
+    text-decoration: none;
+    background-color: #ece7e1;
+    background: linear-gradient(0deg, rgba(208, 29, 208, 0.792), rgba(208, 29, 208, 0.792)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+}
+
+.col-md-8 a::before {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(208, 29, 208, 0.792);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+    margin-bottom: 0;
+}
+
+.col-md-8 a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+.col-md-8 a:hover::before {
+    transform-origin: left;
+    transform: scaleX(0);
+}

@@ -1,0 +1,153 @@
+.col-md-5 {
+    border-radius: 5px; /* Rundar kanterna på kortet */
+    overflow: hidden; /* Förhindrar att innehåll går utanför kortets kanter */
+}
+
+.col-md-5 img {
+    max-width: 100%; /* Gör att bilden inte blir större än kortets bredd */
+    display: block; /* Gör att bilden tar upp hela raden */
+    width: auto;
+}
+
+.col-md-5 p {
+    padding: 10px; /* Inre marginal runt texten inuti kortet */
+}
+
+.col-md-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.col-md-7 {
+    border-radius: 5px; /* Rundar kanterna på kortet */
+    overflow: hidden; /* Förhindrar att innehåll går utanför kortets kanter */
+    text-align: right;
+}
+
+.col-md-7 h1 {
+    font-family: Grandslang roman, sans-serif;
+    z-index: 100;
+    color: #1a1818;
+    /* margin-right: 20px; */
+    text-align: right;
+    margin-top: 5vw;
+    text-transform: uppercase;
+    font-size: 11vw;
+    font-weight: 300;
+    line-height: .95em;
+    display: block;
+    position: relative;
+    margin-bottom: 0%;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+a {
+    font-family: Grandslang roman, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: block;
+    color: #1a1818;
+    text-align: center;
+    position: relative;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #ece7e1;
+    background: linear-gradient(0deg, rgba(208, 29, 208, 0.792), rgba(208, 29, 208, 0.792)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+}
+
+.button-container a::before {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(208, 29, 208, 0.792);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+a::before {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgba(208, 29, 208, 0.792);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.button-container a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+.button-container a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.col-md-7 a {
+    font-family: Grandslang roman, sans-serif;
+    z-index: 100;
+    text-transform: lowercase;
+    font-size: 3vw;
+    font-weight: 500;
+    margin-top: 20px;
+    display: block;
+    color: #1a1818;
+    text-align: right;
+    position: relative;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #ece7e1;
+    background: linear-gradient(0deg, rgba(208, 29, 208, 0.792), rgba(208, 29, 208, 0.792)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+}
+
+.col-md-7 a::before {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(208, 29, 208, 0.792);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+    margin-bottom: 0;
+}
+
+.col-md-7 a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+.col-md-7 a:hover::before {
+    transform-origin: left;
+    transform: scaleX(0);
+}
